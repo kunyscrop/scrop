@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-y-none">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xelar - The Academic Social Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-primary: 29 155 240; /* #1d9bf0 */
+        --color-primary-hover: 26 140 216; /* #1a8cd8 */
+        --color-background: 0 0 0; /* #000000 */
+        --color-text-primary: 231 233 234; /* #e7e9ea */
+        --color-text-secondary: 113 118 123; /* #71767b */
+        --color-border: 47 51 54; /* #2f3336 */
+        --color-card-bg: 22 24 28; /* #16181c */
+      }
+      html.light {
+        --color-primary: 29 155 240;
+        --color-primary-hover: 26 140 216;
+        --color-background: 255 255 255; /* #ffffff */
+        --color-text-primary: 15 20 25; /* #0f1419 */
+        --color-text-secondary: 83 100 113; /* #536471 */
+        --color-border: 239 243 244; /* #eff3f4 */
+        --color-card-bg: 247 249 249; /* #f7f9f9 */
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: 'rgb(var(--color-primary) / <alpha-value>)',
+              primary_hover: 'rgb(var(--color-primary-hover) / <alpha-value>)',
+              background: 'rgb(var(--color-background) / <alpha-value>)',
+              text_primary: 'rgb(var(--color-text-primary) / <alpha-value>)',
+              text_secondary: 'rgb(var(--color-text-secondary) / <alpha-value>)',
+              border: 'rgb(var(--color-border) / <alpha-value>)',
+              card_bg: 'rgb(var(--color-card-bg) / <alpha-value>)'
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-text_primary transition-colors duration-300">
+    <div id="root"></div>
+  </body>
+</html>
